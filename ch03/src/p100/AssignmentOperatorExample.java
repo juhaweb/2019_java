@@ -1,7 +1,5 @@
 package p100;
-/*
- * 대입연산
- */
+
 public class AssignmentOperatorExample {
 
 	public static void main(String[] args) {

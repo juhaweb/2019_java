@@ -1,7 +1,5 @@
 package p152;
-/*
- * 값 목록으로 배열 생성
- */
+
 public class ArrayCreateByValueListExample1 {
 
 	public static void main(String[] args) {

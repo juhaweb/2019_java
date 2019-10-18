@@ -1,7 +1,5 @@
 package p109;
-/*
- * if ì¡°ê±´
- */
+
 public class IfExample {
 
 	public static void main(String[] args) {
@@ -9,13 +7,13 @@ public class IfExample {
 		int score = 93;
 		
 		if(score >= 90) {
-			System.out.println("ì ìˆ˜ê°€ 90ë³´ë‹¤ í½ë‹ˆë‹¤.");
-			System.out.println("ë“±ê¸‰ì€ Aì…ë‹ˆë‹¤.");
+			System.out.println("Á¡¼ö°¡ 90º¸´Ù Å®´Ï´Ù. ");
+			System.out.println(" A µî±ŞÀÔ´Ï´Ù. ");
 		}
 		
 		if(score < 90) {
-			System.out.println("ì ìˆ˜ê°€ 90ë³´ë‹¤ ë‚®ìŠµë‹ˆë‹¤.");
-			System.out.println("ë“±ê¸‰ì€ Bì…ë‹ˆë‹¤.");			// -> ifë¬¸ê³¼ëŠ” ìƒê´€ì—†ëŠ” ì‹¤í–‰ë¬¸. 
+			System.out.println("Á¡¼ö°¡ 90º¸´Ù Å®´Ï´Ù. ");
+			System.out.println(" B µî±ŞÀÔ´Ï´Ù. ");			
 		}
 		
 		
