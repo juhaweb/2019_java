@@ -1,4 +1,4 @@
-package sub04;
+package sub4;
 
 public class Eagle extends Animal{
 

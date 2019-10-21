@@ -1,4 +1,4 @@
-package sub03;
+package sub3;
 
 // public final class BBB extends AAA { : »ó¼Ó¾ÈµÊ. 
 public class BBB extends AAA {

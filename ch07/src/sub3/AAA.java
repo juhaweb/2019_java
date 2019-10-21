@@ -1,4 +1,4 @@
-package sub03;
+package sub3;
 
 public class AAA {
 

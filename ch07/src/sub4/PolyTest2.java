@@ -1,4 +1,4 @@
-package sub04;
+package sub4;
 /*
  * 날짜 : 2019. 10. 21
  * 이름 : 하정욱
