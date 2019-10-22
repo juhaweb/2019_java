@@ -11,7 +11,6 @@ public class Car {
 	
 	// »ı¼ºÀÚ1
 	Car(){
-		
 	}
 	
 	
