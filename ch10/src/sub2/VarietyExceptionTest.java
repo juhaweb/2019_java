@@ -10,15 +10,18 @@ public class VarietyExceptionTest {
 		
 		
 		// 범위에 벗어난 [배열] 인덱스값 참조에러
+		
 		try {
-				int arr[] = {1,2,3};
 			
-				for(int i=0; i<=arr.length; i++) {
-					System.out.println(arr[i]);
-				}
-			} catch(Exception e) {    //ArrayIndexOutOfBoundsException = Exception
-				e.printStackTrace();
+			int arr[] = {1,2,3};
+		
+			for(int i=0; i<=arr.length; i++) {
+				System.out.println(arr[i]);
 			}
+				
+		} catch(Exception e) {    //ArrayIndexOutOfBoundsException = Exception
+			e.printStackTrace();
+		}
 		
 		
 		
@@ -27,6 +30,7 @@ public class VarietyExceptionTest {
 		// NullPoint 에러
 		
 		try {
+			
 			Tiger t = new Tiger();
 			Eagle e = null ;  // 선언만 해둘 경우가 있다.
 			
@@ -47,7 +51,7 @@ public class VarietyExceptionTest {
 			Tiger t = (Tiger) ani;		// 다운캐스팅
 			Shark s = (Shark) ani;		// 잘못된 캐스팅     << ani가 위에보면 Tiger인데 Shark로 바꾸려고함..
 		
-		}catch (Exception e) {			// ClassCastException e
+		} catch (Exception e) {			// ClassCastException e
 			e.printStackTrace();
 		}
 		
