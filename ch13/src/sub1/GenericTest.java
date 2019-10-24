@@ -1,20 +1,20 @@
 package sub1;
 /*
- * ³¯Â¥ : 2019.10.24
- * ÀÌ¸§ : ÇÏÁ¤¿í
- * ³»¿ë : Á¦³×¸¯Å¬·¡½º ½Ç½ÀÇÏ±â ±³Àç p654
+ * ë‚ ì§œ : 2019.10.24
+ * ì´ë¦„ : í•˜ì •ìš±
+ * ë‚´ìš© : ì œë„¤ë¦­í´ë˜ìŠ¤ ì‹¤ìŠµí•˜ê¸° êµì¬ p654
  * 
  */
 public class GenericTest {
 
 	public static void main(String[] args) {
 		
-		Apple a = new Apple ("ÇÑ±¹", 2000);
-		Banana b = new Banana ("´ë¸¸", 1500);
+		Apple a = new Apple ("í•œêµ­", 2000);
+		Banana b = new Banana ("ëŒ€ë§Œ", 1500);
 
-		FruitBox<Apple> box1 = new FruitBox<Apple>();
+		FruitBox<Apple> box1 = new FruitBox<>();
 		box1.setFruit(a);
-											// <>¸¸ ¾²±âµµ ÇÔ. 
+											// <>ë§Œ ì“°ê¸°ë„ í•¨. 
 		FruitBox<Banana> box2 = new FruitBox<>();
 		box2.setFruit(b);
 		
