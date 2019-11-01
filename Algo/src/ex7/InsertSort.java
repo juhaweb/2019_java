@@ -18,19 +18,28 @@ public class InsertSort {
 		int[] arr = {4, 2, 1, 5, 3};
 		
 		
-		for(int j=1 ; j<arr.length ; j++) {
+		for(int j=1; j<arr.length; j++) {
 			
+			int k=arr[j];
+			int i = j-1;
 			
+			while(i>=0 && arr[i] > k ) {
+				arr[i+1]= arr[i];		// 바꿔라 !
+				i -= 1;
+			}
 			
-			
-			
-		}
+			arr[i+1] = k;
 		
 		
 		// 정렬된 배열 출력하기
 		for(int num : arr) {
 			System.out.print(num+" ");
 		}
-		
-	}
+		System.out.println("\n");
+		}
+	}		
 }
+
+
+
+// 개선된 버블정렬이나 퀵정렬이 있음.

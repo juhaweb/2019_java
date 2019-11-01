@@ -15,6 +15,7 @@ package ex6;
  * 6) 3번째 원소보다 작은 원소를 찾으면 서로 자리 교환
  * 7) 이와 같이 최종 원소가 하나 남을 때까지 반복 수행
  */
+
 public class SelectionSort {
 
 	public static void main(String[] args) {
@@ -24,10 +25,16 @@ public class SelectionSort {
 		for(int i=0 ; i<arr.length-1 ; i++) {
 			
 			
+			for(int j=i+1; j<arr.length; j++) {
+				
+				if(arr[i] > arr[j]) {	// i가 j보다 클경우
+					int temp = arr[j];
+					arr[j] = arr[i]; 				// 인덱스번호를 바꿔버림.
+					arr[i] = temp;
+				}
 
-						
-			
-			
+			}
+
 		}
 		
 		
