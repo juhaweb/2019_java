@@ -30,10 +30,22 @@ public class FactorialTest {
 			n! = 1 x 2 x 3 x ... x (n-1) x n
 		 */
 		int rs = factorial(5);
+		
 		System.out.println(rs);
 	}
 	
-	// factorial 메서드 정의
+	// factorial 메서드 정의(재귀메서드 == recursive)
+	public static int factorial(int n) {
+
+		if(n == 1) {
+			return 1;
+		}
+		
+		int result = n * factorial(n-1); 
+		
+		
+		return result;
+	}
 	
 	
 }

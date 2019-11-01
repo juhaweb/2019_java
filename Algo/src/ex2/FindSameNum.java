@@ -1,6 +1,7 @@
 package ex2;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -22,19 +23,37 @@ public class FindSameNum {
 		int[] numbs1 = {6, 3, 5, 3, 7};
 		
 		// 테스트용 데이터
-		int[] numbs2 = {1, 5, 9, 7, 5, 3, 2, 5, 3, 1};
+		int[] numbs2 = {1, 5, 9, 7, 5, 3, 2, 5, 3, 9};
 		
-		Set<Integer> resultSet = fineSameNumber(numbs1);
-		
+		Set<Integer> resultSet = fineSameNumber(numbs2);
 		
 		// 집합 출력
+		Iterator<Integer> it = resultSet.iterator();
+		
+		while(it.hasNext()) {
+			System.out.print(it.next()+", ");
+		}
 		
 		
 	}
 	
 	
 	// fineSameNumber 메서드 정의
-	
-	
+	public static Set<Integer> fineSameNumber(int[] numbs) {
+		
+		Set<Integer> resultSet = new HashSet<>();
+		
+		for(int i=0 ; i<numbs.length ; i++) {
+			
+			for(int j=i+1 ; j<numbs.length ; j++) {
+				
+				if(numbs[i] == numbs[j]) {
+					resultSet.add(numbs[i]);
+				}
+				
+			}			
+		}
+		return resultSet;
+	}
 	
 }

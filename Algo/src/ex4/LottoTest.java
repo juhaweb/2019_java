@@ -23,20 +23,28 @@ public class LottoTest {
 		for(int i=0 ; i<6 ; i++) {
 			
 			// 1 ~ 45번 중 랜덤으로 하나 생성
-
+			int num = (int) Math.ceil(Math.random()*45); 
 			
 			// lotto 배열에 저장
+			lotto[i] = num;
 			
 			// 중복체크
-			
-			
+			for(int j=0 ; j<i ; j++) {
+				
+				if(num == lotto[j]) {
+					i--;
+					break;
+				}
+			}
 		}
 		
 		// 배열원소를 오름차순으로 정렬
 		Arrays.sort(lotto);
 		
 		// 배열 원소 출력
-		
+		for(int num : lotto) {
+			System.out.print(num+" ");
+		}
 		
 	}
 }

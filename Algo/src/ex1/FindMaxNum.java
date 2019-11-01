@@ -18,6 +18,7 @@ public class FindMaxNum {
 		// 개발용 데이터
 		int numbs[] = {17, 92, 18, 33, 58, 7, 33, 42};
 		
+		int maxNum = numbs[0];
 		
 		
 		
