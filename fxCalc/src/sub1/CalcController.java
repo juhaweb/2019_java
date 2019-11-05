@@ -108,8 +108,17 @@ public class CalcController implements Initializable {
 		txtDisp.setText(""+result);		// ""+  string.value of 
 		
 	}
-	public void btnCancelClick() {}
+	public void btnCancelClick() {
+		
+		temp1 = 0;
+		temp2 = 0;
+		operator = 0;
+		
+		
+		
+	}
 	
+
 	
 	
 	
