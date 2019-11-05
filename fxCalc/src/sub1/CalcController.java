@@ -34,8 +34,6 @@ public class CalcController implements Initializable {
 	boolean isFirst = true;	// 이것도 상태변수
 	
 	
-	
-	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
@@ -56,8 +54,6 @@ public class CalcController implements Initializable {
 		btnDiv.setOnAction(event->btnDivClick());
 		btnEq.setOnAction(event->btnEqClick());
 		btnCancel.setOnAction(event->btnCancelClick());
-		
-	
 		
 	} 
 	
@@ -114,6 +110,7 @@ public class CalcController implements Initializable {
 	public void btnMinusClick() {setOperation(2);}
 	public void btnMultiClick() {setOperation(3);}
 	public void btnDivClick() {setOperation(4);}
+	
 	public void btnEqClick() {
 		
 		String getNum = txtDisp.getText();
@@ -134,6 +131,9 @@ public class CalcController implements Initializable {
 		txtDisp.setText(""+result);		// ""+  string.value of 
 		
 	}
+	
+	
+	
 	public void btnCancelClick() {
 		
 		temp1 = 0;
@@ -142,9 +142,7 @@ public class CalcController implements Initializable {
 		
 		txtDisp.setText("0");
 		
-		
 	}
-	
 
 	
 }
