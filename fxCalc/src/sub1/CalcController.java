@@ -31,6 +31,7 @@ public class CalcController implements Initializable {
 	int temp1 = 0;
 	int temp2 = 0;
 	int operator = 0; // 상태변수로 사용 : 1+ 2- 3/ 4*
+	boolean isFirst = true;	// 이것도 상태변수
 	
 	
 	
@@ -61,38 +62,63 @@ public class CalcController implements Initializable {
 	} 
 	
 	// initialize end
+
+	
+	//공통의 로직을 쓸거야. 
+	
+	public void setOperation(int type) {
+		
+			operator = type;
+			String getNum = txtDisp.getText();
+			temp1 = Integer.parseInt(getNum);
+			
+			isFirst = true;
+			
+	}
 	
 	
-	public void btn0Click() {}
-	public void btn1Click() {
-		temp1 = 1;
-		txtDisp.setText("1");
+	public void setNum(int num) {
+		
+		if(isFirst) {
+		
+			
+			txtDisp.setText(""+num);	// 화면에 해당 num 출력
+			
+			isFirst = false;
+			
+		}else {
+			
+			String getNum = txtDisp.getText();			// display창의 우선입력된 숫자를 끄집어냄.
+			String totNum = getNum + num;				// 우선입력된 숫자와 나중 숫자를 더함.
+			
+			int cNum = Integer.parseInt(totNum);		// 문자를 숫자로 변경.  
+			txtDisp.setText(""+cNum);					// 다시 문자로 출력
+
+		}
+		
 	}
-	public void btn2Click() {
-		temp2 = 2;
-		txtDisp.setText("2");
-	}
-	public void btn3Click() {}
-	public void btn4Click() {}
-	public void btn5Click() {}
-	public void btn6Click() {}
-	public void btn7Click() {}
-	public void btn8Click() {}
-	public void btn9Click() {}
-	public void btnPlusClick() {
-		operator = 1;
-	}
-	public void btnMinusClick() {
-		operator = 2;
-	}
-	public void btnMultiClick() {
-		operator = 3;
-	}
-	public void btnDivClick() {
-		operator = 4;
-	}
+	
+
+	public void btn0Click() {setNum(0);}
+	public void btn1Click() {setNum(1);}
+	public void btn2Click() {setNum(2);}
+	public void btn3Click() {setNum(3);}
+	public void btn4Click() {setNum(4);}
+	public void btn5Click() {setNum(5);}
+	public void btn6Click() {setNum(6);}
+	public void btn7Click() {setNum(7);}
+	public void btn8Click() {setNum(8);}
+	public void btn9Click() {setNum(9);}
+	
+	public void btnPlusClick() {setOperation(1);}	
+	public void btnMinusClick() {setOperation(2);}
+	public void btnMultiClick() {setOperation(3);}
+	public void btnDivClick() {setOperation(4);}
 	public void btnEqClick() {
 		
+		String getNum = txtDisp.getText();
+		temp2 = Integer.parseInt(getNum);
+				
 		int result = 0;
 		
 		if(operator ==1) {
@@ -114,17 +140,19 @@ public class CalcController implements Initializable {
 		temp2 = 0;
 		operator = 0;
 		
+		txtDisp.setText("0");
 		
 		
 	}
 	
 
 	
-	
-	
-	
-	
-	
-	
-	
 }
+
+
+
+
+
+// 배열을 이용해서 3항을 가진 식 연산 해결 
+
+
