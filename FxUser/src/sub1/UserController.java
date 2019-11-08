@@ -5,8 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 
-import com.mysql.jdbc.Connection;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -38,7 +36,6 @@ public class UserController implements Initializable {
 		
 	
 		btnRegister.setOnAction(event->btnRegisterClick());
-		btnCancle.setOnAction(event->btnCancleClick());
 		
 	} // initialize end
 	
@@ -46,11 +43,11 @@ public class UserController implements Initializable {
 	// 핸들러함수 만들고 
 	public void btnRegisterClick () {
 	
-		String uid = txtUid.getText();
-		String name = txtName.getText();
-		String hp = txtHp.getText();
-		String pos = cbPos.getValue();
-		String dep = cbDep.getValue();
+		String uid 	= txtUid.getText();
+		String name	= txtName.getText();
+		String hp	= txtHp.getText();
+		String pos	= cbPos.getValue();
+		String dep	= cbDep.getValue();
 		
 		
 

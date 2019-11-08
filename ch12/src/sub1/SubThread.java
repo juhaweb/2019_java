@@ -1,6 +1,6 @@
 package sub1;
 
-public class SubThread extends ThreadTest {
+public class SubThread extends Thread {
 
 	private String name;
 	
@@ -14,7 +14,11 @@ public class SubThread extends ThreadTest {
 		
 		for(int i=1; i<=10; i++) {
 			
-			Thread.sleep(1000);	
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			
 			System.out.println(name + "스레드실행....");
 		}
