@@ -14,7 +14,7 @@ public class InsertTest {
 	public static void main(String[] args) throws Exception {
 		
 		// DBÁ¤º¸
-		String host = "jdbc:mysql://192.168.44.9:3306/hju";
+		String host = "jdbc:mysql://192.168.44.7:3306/hju";
 		String user = "hju";
 		String pass = "1234";
 		
